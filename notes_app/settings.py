@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '(zehexi#fw83=96v$#fm=sg404r3xy$87zdep&3x^qn)9lo!&k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'notes-235.herokuapp.com']
 
