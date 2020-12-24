@@ -21,3 +21,9 @@ class NotePostSerializer(serializers.ModelSerializer):
         instance.content = validated_data.get('content', instance.content)
         instance.save()
         return instance
+
+
+class NoteListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = NotePost
+        fields = ['title',]

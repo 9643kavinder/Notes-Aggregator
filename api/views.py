@@ -1,5 +1,5 @@
 from .models import NotePost
-from .serializers import NotePostSerializer
+from .serializers import NotePostSerializer, NoteListSerializer
 from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -8,11 +8,11 @@ from rest_framework import status
 
 class NoteListView(APIView):
     """
-    List all note snippets
+    List all titles of note snippets
     """
     def get(self, request, format=None):
         note_snippets = NotePost.objects.all()
-        serializer = NotePostSerializer(note_snippets, many=True)
+        serializer = NoteListSerializer(note_snippets, many=True)
         return Response(serializer.data)
 
 
